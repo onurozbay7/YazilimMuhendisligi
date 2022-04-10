@@ -16,13 +16,41 @@ public class MyClass {
       Scanner girdi2 = new Scanner(System.in);
       int y = girdi2.nextInt();
       
-     int sonuc = topla(x,y);
+      System.out.println("Hangi islemi yapmak istiyorsunuz ? toplama için T, Bölüm için B harfini giriniz..");
       
-      System.out.println("Toplama İşleminin Sonucu:" + sonuc);
+      Scanner girdi3 = new Scanner(System.in);
+      String islem = girdi3.next();
+      
+      if(islem.equals("T") || islem.equals("t")){
+          double sonuc = topla(x,y);
+          
+          System.out.println("Toplama işleminin sonucu: " + sonuc);
+      }
+      
+      else if(islem.equals("B") || islem.equals("b")){
+          double sonuc = bolme(x,y);
+          
+          System.out.println("Bölme işleminin sonucu: " + sonuc);
+      }
+      
+      else {
+          System.out.println("Hatalı bir değer girdiniz.. Lütfen tekrar deneyin.");
+      }
+      
+      
+     
+      
+      
     }
     
     public static int topla(int x, int y){
         int sonuc = x+y;
+        
+        return sonuc;
+    }
+    
+    public static double bolme(int x, int y){
+        double sonuc = x/y;
         
         return sonuc;
     }
