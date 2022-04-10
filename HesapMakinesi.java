@@ -28,9 +28,17 @@ public class MyClass {
       }
       
       else if(islem.equals("B") || islem.equals("b")){
-          double sonuc = bolme(x,y);
+          if(y!= 0){
+              
+              double sonuc = bolme(x,y);
           
           System.out.println("Bölme işleminin sonucu: " + sonuc);
+          }
+          
+          else{
+              System.out.println("0'a bölme işlemi yapılamaz..");
+          }
+          
       }
       
       else {
